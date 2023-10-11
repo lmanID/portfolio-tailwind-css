@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="output.css"
+    />
+    <title>Belajar Tailwind</title>
+  </head>
+  <body>
+    <!-- ========================== NAVBAR ========================== -->
+    <nav
+      class="px-4 flex items-center sm:px-5 md:px-24 lg:px-0 sticky top-0 z-20 bg-white"
+    >
+      <div
+        class="h-28 w-full flex justify-between items-center lg:px-0 lg:justify-evenly lg:flex-1"
+      >
+        <div class="humb-menu lg:hidden">
+          <img
+            class=""
+            src="img/humb-menu.png"
+            alt=""
+          />
+        </div>
+        <div class="w-44 sm:w-52 lg:w-36 flex h-full">
+          <img
+            class="w-full object-contain"
+            src="img/honda_power_power_of_dream.png"
+            alt="Logo Honda"
+          />
+        </div>
+        <div class="lg:hidden">
+          <img
+            class=""
+            src="img/grid-menu.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div
+        class="nav-menu absolute h-screen z-50 pt-20 pl-8 left-0 top-0 -translate-x-full transition-all bg-custom-red flex flex-col w-4/5 lg:flex-row lg:static lg:bg-inherit lg:h-max lg:w-max lg:pt-0 lg:translate-x-0 lg:flex-1"
+      >
+        <div class="close-menu absolute w-8 h-8 flex right-5 top-5 lg:hidden">
+          <img
+            class="w-1/2 object-contain mx-auto"
+            src="img/close-menu.png"
+            alt=""
+          />
+        </div>
+
+        <ul
+          class="w-4/5 p-1 space-y-8 lg:flex lg:flex-row lg:w-auto lg:space-y-0"
+        >
+          <li
+            class="flex place-items-center h-9 space-x-4 lg:h-auto lg:w-auto lg:space-x-0 lg:px-6 lg:py-3"
+          >
+            <img
+              class="object-contain w-6 h-auto block lg:bg-black lg:hidden"
+              src="img/home-icon.svg"
+              alt=""
+            />
+            <a
+              href=""
+              class="inline-block w-max text-white font-medium text-xl lg:text-slate-600 lg:font-medium"
+              >Home</a
+            >
+          </li>
+          <li
+            class="flex place-items-center h-9 space-x-4 lg:h-auto lg:w-auto lg:space-x-0 lg:px-6 lg:py-3"
+          >
+            <img
+              class="object-contain w-6 h-auto block lg:bg-black lg:hidden"
+              src="img/car-icon.svg"
+              alt=""
+            />
+            <a
+              href=""
+              class="inline-block w-max text-white font-medium text-xl lg:text-slate-600 lg:font-medium"
+              >Produk</a
+            >
+          </li>
+          <li
+            class="flex place-items-center h-9 space-x-4 lg:h-auto lg:w-auto lg:space-x-0 lg:px-6 lg:py-3"
+          >
+            <img
+              class="object-contain w-6 h-auto block lg:bg-black lg:hidden"
+              src="img/list-icon.svg"
+              alt=""
+            />
+            <a
+              href=""
+              class="inline-block w-max text-white font-medium text-xl lg:text-slate-600 lg:font-medium"
+              >Pricelist</a
+            >
+          </li>
+          <li
+            class="flex place-items-center h-9 space-x-4 lg:h-auto lg:w-auto lg:space-x-0 lg:px-6 lg:py-3"
+          >
+            <img
+              class="object-contain w-6 h-auto block lg:bg-black lg:hidden"
+              src="img/promo-icon.svg"
+              alt=""
+            />
+            <a
+              href=""
+              class="inline-block w-max text-white font-medium text-xl lg:text-slate-600 lg:font-medium"
+              >Promo</a
+            >
+          </li>
+          <li
+            class="flex place-items-center h-9 space-x-4 lg:h-auto lg:w-auto lg:space-x-0 lg:px-6 lg:py-3"
+          >
+            <img
+              class="object-contain w-6 h-auto block lg:bg-black lg:hidden"
+              src="img/tentang-kami-icon.svg"
+              alt=""
+            />
+            <a
+              href=""
+              class="inline-block w-max text-white font-medium text-xl lg:text-slate-600 lg:font-medium"
+              >Tentang Kami</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ========================== END NAVBAR ========================== -->
+
+    <!-- ========================== HERO SECTION ========================== -->
+    <section>
+      <div
+        class="swiper relative aspect-[4/5] md:aspect-video lg:aspect-[21/9] overflow-hidden"
+      >
+        <div class="swiper-wrapper flex flex-row transition-all w-max">
+          <div class="swiper-slide w-screen">
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="img/1.jpg"
+              />
+              <img
+                class="w-full"
+                src="img/1a.jpg"
+                alt=""
+              />
+            </picture>
+          </div>
+          <div class="swiper-slide w-screen">
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="img/3.jpg"
+              />
+              <img
+                class="w-full"
+                src="img/3a.jpg"
+                alt=""
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================== END HERO SECTION ========================== -->
+
+    <!-- ========================== HEADER PILIH MOBIL ==========================  -->
+    <header class="px-4 pt-11 flex flex-col gap-3">
+      <h1
+        class="text-3xl text-custom-silver font-bold max-w-xs md:max-w-full md:text-center"
+      >
+        Pilih Mobil <span class="text-custom-red">Honda</span> favorit anda !
+      </h1>
+      <p class="text-custom-silver text-opacity-50 text-base md:text-center">
+        Segera wujudkan impian anda untuk memiliki kendaraan pribadi atau
+        keluarga, bersama honda.
+      </p>
+    </header>
+    <!-- ========================== END HEADER PILIH MOBIL ==========================  -->
+
+    <!-- ========================== SECTION CARD CAR ========================== -->
+    <section
+      class="swiper-car relative aspect-[5/4.69] overflow-hidden lg:aspect-video xl:aspect-[2.75/1] 2xl:aspect-[3.5/1] lg:px-8"
+    >
+      <div
+        class="swiper-wrapper-car relative transition-all h-full w-max flex flex-row"
+      >
+        <div
+          class="swiper-slide-car relative h-full w-screen box-border flex place-items-center lg:w-w-screen-1/2 xl:w-w-screen-1/3"
+        >
+          <div
+            class="absolute w-w-car h-h-car inset-1/2 transform -translate-x-1/2 -translate-y-1/2 box-border flex items-center"
+          >
+            <img
+              src="img/brio.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="w-w-car h-h-car-cover mx-auto flex flex-row box-border gap-6"
+          >
+            <div class="flex-1 flex flex-col box-border">
+              <div
+                class="bg-custom-black h-1/4 w-full flex place-content-center rounded-t-lg"
+              >
+                <img
+                  class="object-contain w-4/5 h-auto"
+                  src="img/brio-logo.svg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="bg-custom-red flex-auto flex items-end place-content-center pb-3 rounded-b-lg box-border md:pb-8 lg:pb-6"
+              >
+                <div class="h-max w-full flex flex-col gap-2 md:gap-4 lg:gap-2">
+                  <h1
+                    class="text-white font-semibold text-center w-full text-base md:text-2xl lg:text-xl"
+                  >
+                    Harga Mulai
+                  </h1>
+                  <h1
+                    class="text-white font-semibold text-center w-ful text-base md:text-2xl lg:text-xl"
+                  >
+                    Rp 181.180.000
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1 flex flex-col justify-end">
+              <div class="flex flex-col gap-2">
+                <button
+                  class="text-xs bg-custom-red text-white font-medium py-2 rounded-full w-full flex justify-center items-center gap-1 md:py-3 md:text-base md:gap-4 lg:gap-1 lg:text-sm"
+                >
+                  Booking Sekarang
+                  <span class="h-full aspect-square flex items-center"
+                    ><img
+                      class="md:w-full"
+                      src="img/ok-sign.svg"
+                      alt=""
+                  /></span>
+                </button>
+                <button
+                  class="text-xs text-custom-silver text-opacity-50 border-custom-silver border-opacity-50 border-2 font-medium py-2 rounded-full w-full flex justify-center items-center gap-1 md:py-3 md:text-base md:gap-4 lg:gap-1 lg:text-sm"
+                >
+                  Selengkapnya
+                  <span class="h-full aspect-square flex items-center"
+                    ><img
+                      class="md:w-full"
+                      src="img/line.svg"
+                      alt=""
+                  /></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide-car relative h-full w-screen box-border flex place-items-center lg:w-w-screen-1/2 xl:w-w-screen-1/3"
+        >
+          <div
+            class="absolute w-w-car h-h-car inset-1/2 transform -translate-x-1/2 -translate-y-1/2 box-border flex items-center"
+          >
+            <img
+              src="img/hrv.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="w-w-car h-h-car-cover mx-auto flex flex-row box-border gap-6"
+          >
+            <div class="flex-1 flex flex-col box-border">
+              <div
+                class="bg-custom-black h-1/4 w-full flex place-content-center rounded-t-lg"
+              >
+                <img
+                  class="object-contain w-4/5 h-auto"
+                  src="img/hrv-logo.svg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="bg-custom-red flex-auto flex items-end place-content-center pb-3 rounded-b-lg box-border md:pb-8 lg:pb-6"
+              >
+                <div class="h-max w-full flex flex-col gap-2 md:gap-4 lg:gap-2">
+                  <h1
+                    class="text-white font-semibold text-center w-full text-base md:text-2xl lg:text-xl"
+                  >
+                    Harga Mulai
+                  </h1>
+                  <h1
+                    class="text-white font-semibold text-center w-ful text-base md:text-2xl lg:text-xl"
+                  >
+                    Rp 181.180.000
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1 flex flex-col justify-end">
+              <div class="flex flex-col gap-2">
+                <button
+                  class="text-xs bg-custom-red text-white font-medium py-2 rounded-full w-full flex justify-center items-center gap-1 md:py-3 md:text-base md:gap-4 lg:gap-1 lg:text-sm"
+                >
+                  Booking Sekarang
+                  <span class="h-full aspect-square flex items-center"
+                    ><img
+                      class="md:w-full"
+                      src="img/ok-sign.svg"
+                      alt=""
+                  /></span>
+                </button>
+                <button
+                  class="text-xs text-custom-silver text-opacity-50 border-custom-silver border-opacity-50 border-2 font-medium py-2 rounded-full w-full flex justify-center items-center gap-1 md:py-3 md:text-base md:gap-4 lg:gap-1 lg:text-sm"
+                >
+                  Selengkapnya
+                  <span class="h-full aspect-square flex items-center"
+                    ><img
+                      class="md:w-full"
+                      src="img/line.svg"
+                      alt=""
+                  /></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide-car relative h-full w-screen box-border flex place-items-center lg:w-w-screen-1/2 xl:w-w-screen-1/3"
+        >
+          <div
+            class="absolute w-w-car h-h-car inset-1/2 transform -translate-x-1/2 -translate-y-1/2 box-border flex items-center"
+          >
+            <img
+              src="img/brv.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="w-w-car h-h-car-cover mx-auto flex flex-row box-border gap-6"
+          >
+            <div class="flex-1 flex flex-col box-border">
+              <div
+                class="bg-custom-black h-1/4 w-full flex place-content-center rounded-t-lg"
+              >
+                <img
+                  class="object-contain w-4/5 h-auto"
+                  src="img/brv-logo.svg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="bg-custom-red flex-auto flex items-end place-content-center pb-3 rounded-b-lg box-border md:pb-8 lg:pb-6"
+              >
+                <div class="h-max w-full flex flex-col gap-2 md:gap-4 lg:gap-2">
+                  <h1
+                    class="text-white font-semibold text-center w-full text-base md:text-2xl lg:text-xl"
+                  >
+                    Harga Mulai
+                  </h1>
+                  <h1
+                    class="text-white font-semibold text-center w-ful text-base md:text-2xl lg:text-xl"
+                  >
+                    Rp 181.180.000
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1 flex flex-col justify-end">
+              <div class="flex flex-col gap-2">
+                <button
+                  class="text-xs bg-custom-red text-white font-medium py-2 rounded-full w-full flex justify-center items-center gap-1 md:py-3 md:text-base md:gap-4 lg:gap-1 lg:text-sm"
+                >
+                  Booking Sekarang
+                  <span class="h-full aspect-square flex items-center"
+                    ><img
+                      class="md:w-full"
+                      src="img/ok-sign.svg"
+                      alt=""
+                  /></span>
+                </button>
+                <button
+                  class="text-xs text-custom-silver text-opacity-50 border-custom-silver border-opacity-50 border-2 font-medium py-2 rounded-full w-full flex justify-center items-center gap-1 md:py-3 md:text-base md:gap-4 lg:gap-1 lg:text-sm"
+                >
+                  Selengkapnya
+                  <span class="h-full aspect-square flex items-center"
+                    ><img
+                      class="md:w-full"
+                      src="img/line.svg"
+                      alt=""
+                  /></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide-car relative h-full w-screen box-border flex place-items-center lg:w-w-screen-1/2 xl:w-w-screen-1/3"
+        >
+          <div
+            class="absolute w-w-car h-h-car inset-1/2 transform -translate-x-1/2 -translate-y-1/2 box-border flex items-center"
+          >
+            <img
+              src="img/crv.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="w-w-car h-h-car-cover mx-auto flex flex-row box-border gap-6"
+          >
+            <div class="flex-1 flex flex-col box-border">
+              <div
+                class="bg-custom-black h-1/4 w-full flex place-content-center rounded-t-lg"
+              >
+                <img
+                  class="object-contain w-4/5 h-auto"
+                  src="img/crv-logo.svg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="bg-custom-red flex-auto flex items-end place-content-center pb-3 rounded-b-lg box-border md:pb-8 lg:pb-6"
+              >
+                <div class="h-max w-full flex flex-col gap-2 md:gap-4 lg:gap-2">
+                  <h1
+                    class="text-white font-semibold text-center w-full text-base md:text-2xl lg:text-xl"
+                  >
+                    Harga Mulai
+                  </h1>
+                  <h1
+                    class="text-white font-semibold text-center w-ful text-base md:text-2xl lg:text-xl"
+                  >
+                    Rp 181.180.000
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1 flex flex-col justify-end">
+              <div class="flex flex-col gap-2">
+                <button
+                  class="text-xs bg-custom-red text-white font-medium py-2 rounded-full w-full flex justify-center items-center gap-1 md:py-3 md:text-base md:gap-4 lg:gap-1 lg:text-sm"
+                >
+                  Booking Sekarang
+                  <span class="h-full aspect-square flex items-center"
+                    ><img
+                      class="md:w-full"
+                      src="img/ok-sign.svg"
+                      alt=""
+                  /></span>
+                </button>
+                <button
+                  class="text-xs text-custom-silver text-opacity-50 border-custom-silver border-opacity-50 border-2 font-medium py-2 rounded-full w-full flex justify-center items-center gap-1 md:py-3 md:text-base md:gap-4 lg:gap-1 lg:text-sm"
+                >
+                  Selengkapnya
+                  <span class="h-full aspect-square flex items-center"
+                    ><img
+                      class="md:w-full"
+                      src="img/line.svg"
+                      alt=""
+                  /></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide-car relative h-full w-screen box-border flex place-items-center lg:w-w-screen-1/2 xl:w-w-screen-1/3"
+        >
+          <div
+            class="absolute w-w-car h-h-car inset-1/2 transform -translate-x-1/2 -translate-y-1/2 box-border flex items-center"
+          >
+            <img
+              src="img/wrv.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="w-w-car h-h-car-cover mx-auto flex flex-row box-border gap-6"
+          >
+            <div class="flex-1 flex flex-col box-border">
+              <div
+                class="bg-custom-black h-1/4 w-full flex place-content-center rounded-t-lg"
+              >
+                <img
+                  class="object-contain w-4/5 h-auto"
+                  src="img/wrv-logo.svg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="bg-custom-red flex-auto flex items-end place-content-center pb-3 rounded-b-lg box-border md:pb-8 lg:pb-6"
+              >
+                <div class="h-max w-full flex flex-col gap-2 md:gap-4 lg:gap-2">
+                  <h1
+                    class="text-white font-semibold text-center w-full text-base md:text-2xl lg:text-xl"
+                  >
+                    Harga Mulai
+                  </h1>
+                  <h1
+                    class="text-white font-semibold text-center w-ful text-base md:text-2xl lg:text-xl"
+                  >
+                    Rp 181.180.000
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1 flex flex-col justify-end">
+              <div class="flex flex-col gap-2">
+                <button
+                  class="text-xs bg-custom-red text-white font-medium py-2 rounded-full w-full flex justify-center items-center gap-1 md:py-3 md:text-base md:gap-4 lg:gap-1 lg:text-sm"
+                >
+                  Booking Sekarang
+                  <span class="h-full aspect-square flex items-center"
+                    ><img
+                      class="md:w-full"
+                      src="img/ok-sign.svg"
+                      alt=""
+                  /></span>
+                </button>
+                <button
+                  class="text-xs text-custom-silver text-opacity-50 border-custom-silver border-opacity-50 border-2 font-medium py-2 rounded-full w-full flex justify-center items-center gap-1 md:py-3 md:text-base md:gap-4 lg:gap-1 lg:text-sm"
+                >
+                  Selengkapnya
+                  <span class="h-full aspect-square flex items-center"
+                    ><img
+                      class="md:w-full"
+                      src="img/line.svg"
+                      alt=""
+                  /></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide-car relative h-full w-screen box-border flex place-items-center lg:w-w-screen-1/2 xl:w-w-screen-1/3"
+        >
+          <div
+            class="absolute w-w-car h-h-car inset-1/2 transform -translate-x-1/2 -translate-y-1/2 box-border flex items-center"
+          >
+            <img
+              src="img/city-hb.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="w-w-car h-h-car-cover mx-auto flex flex-row box-border gap-6"
+          >
+            <div class="flex-1 flex flex-col box-border">
+              <div
+                class="bg-custom-black h-1/4 w-full flex place-content-center rounded-t-lg"
+              >
+                <img
+                  class="object-contain w-4/5 h-auto"
+                  src="img/city-hb.svg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="bg-custom-red flex-auto flex items-end place-content-center pb-3 rounded-b-lg box-border md:pb-8 lg:pb-6"
+              >
+                <div class="h-max w-full flex flex-col gap-2 md:gap-4 lg:gap-2">
+                  <h1
+                    class="text-white font-semibold text-center w-full text-base md:text-2xl lg:text-xl"
+                  >
+                    Harga Mulai
+                  </h1>
+                  <h1
+                    class="text-white font-semibold text-center w-ful text-base md:text-2xl lg:text-xl"
+                  >
+                    Rp 181.180.000
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1 flex flex-col justify-end">
+              <div class="flex flex-col gap-2">
+                <button
+                  class="text-xs bg-custom-red text-white font-medium py-2 rounded-full w-full flex justify-center items-center gap-1 md:py-3 md:text-base md:gap-4 lg:gap-1 lg:text-sm"
+                >
+                  Booking Sekarang
+                  <span class="h-full aspect-square flex items-center"
+                    ><img
+                      class="md:w-full"
+                      src="img/ok-sign.svg"
+                      alt=""
+                  /></span>
+                </button>
+                <button
+                  class="text-xs text-custom-silver text-opacity-50 border-custom-silver border-opacity-50 border-2 font-medium py-2 rounded-full w-full flex justify-center items-center gap-1 md:py-3 md:text-base md:gap-4 lg:gap-1 lg:text-sm"
+                >
+                  Selengkapnya
+                  <span class="h-full aspect-square flex items-center"
+                    ><img
+                      class="md:w-full"
+                      src="img/line.svg"
+                      alt=""
+                  /></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide-car relative h-full w-screen box-border flex place-items-center lg:w-w-screen-1/2 xl:w-w-screen-1/3"
+        >
+          <div
+            class="absolute w-w-car h-h-car inset-1/2 transform -translate-x-1/2 -translate-y-1/2 box-border flex items-center"
+          >
+            <img
+              src="img/new-city.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="w-w-car h-h-car-cover mx-auto flex flex-row box-border gap-6"
+          >
+            <div class="flex-1 flex flex-col box-border">
+              <div
+                class="bg-custom-black h-1/4 w-full flex place-content-center rounded-t-lg"
+              >
+                <img
+                  class="object-contain w-4/5 h-auto"
+                  src="img/new-city-logo.svg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="bg-custom-red flex-auto flex items-end place-content-center pb-3 rounded-b-lg box-border md:pb-8 lg:pb-6"
+              >
+                <div class="h-max w-full flex flex-col gap-2 md:gap-4 lg:gap-2">
+                  <h1
+                    class="text-white font-semibold text-center w-full text-base md:text-2xl lg:text-xl"
+                  >
+                    Harga Mulai
+                  </h1>
+                  <h1
+                    class="text-white font-semibold text-center w-ful text-base md:text-2xl lg:text-xl"
+                  >
+                    Rp 181.180.000
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1 flex flex-col justify-end">
+              <div class="flex flex-col gap-2">
+                <button
+                  class="text-xs bg-custom-red text-white font-medium py-2 rounded-full w-full flex justify-center items-center gap-1 md:py-3 md:text-base md:gap-4 lg:gap-1 lg:text-sm"
+                >
+                  Booking Sekarang
+                  <span class="h-full aspect-square flex items-center"
+                    ><img
+                      class="md:w-full"
+                      src="img/ok-sign.svg"
+                      alt=""
+                  /></span>
+                </button>
+                <button
+                  class="text-xs text-custom-silver text-opacity-50 border-custom-silver border-opacity-50 border-2 font-medium py-2 rounded-full w-full flex justify-center items-center gap-1 md:py-3 md:text-base md:gap-4 lg:gap-1 lg:text-sm"
+                >
+                  Selengkapnya
+                  <span class="h-full aspect-square flex items-center"
+                    ><img
+                      class="md:w-full"
+                      src="img/line.svg"
+                      alt=""
+                  /></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide-car relative h-full w-screen box-border flex place-items-center lg:w-w-screen-1/2 xl:w-w-screen-1/3"
+        >
+          <div
+            class="absolute w-w-car h-h-car inset-1/2 transform -translate-x-1/2 -translate-y-1/2 box-border flex items-center"
+          >
+            <img
+              src="img/civic-rs.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="w-w-car h-h-car-cover mx-auto flex flex-row box-border gap-6"
+          >
+            <div class="flex-1 flex flex-col box-border">
+              <div
+                class="bg-custom-black h-1/4 w-full flex place-content-center rounded-t-lg"
+              >
+                <img
+                  class="object-contain w-4/5 h-auto"
+                  src="img/civic-rs-logo.svg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="bg-custom-red flex-auto flex items-end place-content-center pb-3 rounded-b-lg box-border md:pb-8 lg:pb-6"
+              >
+                <div class="h-max w-full flex flex-col gap-2 md:gap-4 lg:gap-2">
+                  <h1
+                    class="text-white font-semibold text-center w-full text-base md:text-2xl lg:text-xl"
+                  >
+                    Harga Mulai
+                  </h1>
+                  <h1
+                    class="text-white font-semibold text-center w-ful text-base md:text-2xl lg:text-xl"
+                  >
+                    Rp 181.180.000
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1 flex flex-col justify-end">
+              <div class="flex flex-col gap-2">
+                <button
+                  class="text-xs bg-custom-red text-white font-medium py-2 rounded-full w-full flex justify-center items-center gap-1 md:py-3 md:text-base md:gap-4 lg:gap-1 lg:text-sm"
+                >
+                  Booking Sekarang
+                  <span class="h-full aspect-square flex items-center"
+                    ><img
+                      class="md:w-full"
+                      src="img/ok-sign.svg"
+                      alt=""
+                  /></span>
+                </button>
+                <button
+                  class="text-xs text-custom-silver text-opacity-50 border-custom-silver border-opacity-50 border-2 font-medium py-2 rounded-full w-full flex justify-center items-center gap-1 md:py-3 md:text-base md:gap-4 lg:gap-1 lg:text-sm"
+                >
+                  Selengkapnya
+                  <span class="h-full aspect-square flex items-center"
+                    ><img
+                      class="md:w-full"
+                      src="img/line.svg"
+                      alt=""
+                  /></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide-car relative h-full w-screen box-border flex place-items-center lg:w-w-screen-1/2 xl:w-w-screen-1/3"
+        >
+          <div
+            class="absolute w-w-car h-h-car inset-1/2 transform -translate-x-1/2 -translate-y-1/2 box-border flex items-center"
+          >
+            <img
+              src="img/new-accord.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="w-w-car h-h-car-cover mx-auto flex flex-row box-border gap-6"
+          >
+            <div class="flex-1 flex flex-col box-border">
+              <div
+                class="bg-custom-black h-1/4 w-full flex place-content-center rounded-t-lg"
+              >
+                <img
+                  class="object-contain w-4/5 h-auto"
+                  src="img/accord-logo.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="bg-custom-red flex-auto flex items-end place-content-center pb-3 rounded-b-lg box-border md:pb-8 lg:pb-6"
+              >
+                <div class="h-max w-full flex flex-col gap-2 md:gap-4 lg:gap-2">
+                  <h1
+                    class="text-white font-semibold text-center w-full text-base md:text-2xl lg:text-xl"
+                  >
+                    Harga Mulai
+                  </h1>
+                  <h1
+                    class="text-white font-semibold text-center w-ful text-base md:text-2xl lg:text-xl"
+                  >
+                    Rp 181.180.000
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1 flex flex-col justify-end">
+              <div class="flex flex-col gap-2">
+                <button
+                  class="text-xs bg-custom-red text-white font-medium py-2 rounded-full w-full flex justify-center items-center gap-1 md:py-3 md:text-base md:gap-4 lg:gap-1 lg:text-sm"
+                >
+                  Booking Sekarang
+                  <span class="h-full aspect-square flex items-center"
+                    ><img
+                      class="md:w-full"
+                      src="img/ok-sign.svg"
+                      alt=""
+                  /></span>
+                </button>
+                <button
+                  class="text-xs text-custom-silver text-opacity-50 border-custom-silver border-opacity-50 border-2 font-medium py-2 rounded-full w-full flex justify-center items-center gap-1 md:py-3 md:text-base md:gap-4 lg:gap-1 lg:text-sm"
+                >
+                  Selengkapnya
+                  <span class="h-full aspect-square flex items-center"
+                    ><img
+                      class="md:w-full"
+                      src="img/line.svg"
+                      alt=""
+                  /></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="next-btn absolute right-0 top-1/2 w-8 aspect-square flex place-content-center place-items-center md:w-12"
+      >
+        <img
+          class="h-3/4 w-auto"
+          src="img/next-icon.svg"
+          alt="next"
+        />
+      </button>
+      <button
+        class="prev-btn absolute left-0 top-1/2 w-8 aspect-square flex place-content-center place-items-center md:w-12"
+      >
+        <img
+          class="h-3/4 w-auto"
+          src="img/prev-icon.svg"
+          alt="prev"
+        />
+      </button>
+      <div
+        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex gap-1"
+      >
+        <span
+          class="step-card-cars bg-custom-red opacity-20 w-2 h-2 inline-block rounded-full"
+        ></span>
+        <span
+          class="step-card-cars bg-custom-silver opacity-20 w-2 h-2 inline-block rounded-full"
+        ></span>
+        <span
+          class="step-card-cars bg-custom-silver opacity-20 w-2 h-2 inline-block rounded-full"
+        ></span>
+        <span
+          class="step-card-cars bg-custom-silver opacity-20 w-2 h-2 inline-block rounded-full"
+        ></span>
+        <span
+          class="step-card-cars bg-custom-silver opacity-20 w-2 h-2 inline-block rounded-full"
+        ></span>
+        <span
+          class="step-card-cars bg-custom-silver opacity-20 w-2 h-2 inline-block rounded-full"
+        ></span>
+        <span
+          class="step-card-cars bg-custom-silver opacity-20 w-2 h-2 inline-block rounded-full"
+        ></span>
+        <span
+          class="step-card-cars bg-custom-silver opacity-20 w-2 h-2 inline-block rounded-full"
+        ></span>
+        <span
+          class="step-card-cars bg-custom-silver opacity-20 w-2 h-2 inline-block rounded-full"
+        ></span>
+      </div>
+    </section>
+    <!-- ========================== END SECTION CARD CAR ========================== -->
+    <section class="px-4 pt-8 lg:flex justify-center">
+      <p
+        class="text-sm text-custom-silver opacity-80 font-serif lg:max-w-lg lg:text-center"
+      >
+        *Keterangan : <br />
+        <br />Harga tertera adalah harga dengan tipe terendah. Harga tertera
+        adalah harga OTR Wilayah Kabupaten dan Kota Pekalongan, Kajen, Limpung,
+        Batang, Waleri dan sekitarnya. Serta kepemilikan mobil pertama.Harga
+        yang tertera adalah harga OTR untuk nomor rangka tahun 2023.
+      </p>
+    </section>
+
+    <!-- ========================== HEADER SELENGKAPNYA HONDA PEKALONGAN ==========================  -->
+    <header class="px-4 pt-11 flex flex-col gap-3">
+      <h1
+        class="text-3xl text-custom-silver font-bold max-w-xs md:max-w-full md:text-center"
+      >
+        Cari tau tentang <span class="text-custom-red">Honda</span> Pekalongan
+        Motor
+      </h1>
+    </header>
+    <section class="px-4 pt-8">
+      <article class="flex flex-col gap-6">
+        <div class="bg-custom-silver w-full h-52 rounded-t-xl overflow-hidden">
+          <img
+            class="h-full w-auto"
+            src="img/depan showroom.jpeg"
+            alt=""
+          />
+        </div>
+        <div class="w-full px-6 flex flex-col gap-4">
+          <div class="w-72 flex flex-col gap-4">
+            <h1 class="font-semibold text-xl text-custom-silver">
+              Honda Pekalongan Motor
+            </h1>
+            <p class="text-sm text-custom-silver opacity-50">
+              Honda Pekalongan Motor merupakan authorized main dealer mobil
+              honda yang melayani penjualan service dan spare part khususnya di
+              wilayah kabupaten dan kota pekalongan, kajen ...
+            </p>
+          </div>
+          <div class="">
+            <button
+              class="w-auto text-base text-custom-silver text-opacity-80 border-custom-silver border-opacity-50 font-medium flex justify-center items-center gap-2"
+            >
+              Selengkapnya
+              <span class="h-full w-5 aspect-square flex items-center"
+                ><img
+                  class="w-full"
+                  src="img/line.svg"
+                  alt=""
+              /></span>
+            </button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- ========================== END HEADER SELENGKAPNYA HONDA PEKALONGAN ==========================  -->
+
+    <!-- ========================== HEADER KONSULTASI ==========================  -->
+    <header class="px-4 pt-11 flex flex-col gap-3">
+      <h1
+        class="text-3xl text-custom-silver font-bold max-w-xs md:max-w-full md:text-center"
+      >
+        Butuh Konsultasi Langsung Mengenai Produk
+        <span class="text-custom-red">Honda</span> ?
+      </h1>
+      <p class="text-custom-silver text-opacity-50 text-base md:text-center">
+        Marketing Konsultan kami siap melayani dengan sepenuh hati, serta
+        memberikan solusi yang terbaik untuk kebutuhan anda.
+      </p>
+    </header>
+    <!-- ========================== END HEADER KONSULTASI ==========================  -->
+
+    <!-- ========================== SALES KONSULTAN ==========================  -->
+    <section class="w-full mt-8 px-8">
+      <div class="pb-11 flex flex-col gap-4">
+        <img
+          class="rounded-lg"
+          src="img/Sales-Honda-Pekalongan-Motor.jpg"
+          alt=""
+        />
+        <div class="flex flex-col items-center">
+          <h1 class="text-xl font-bold text-custom-red">"MAS NUNO"</h1>
+          <h3 class="text-base text-custom-silver text-opacity-50">
+            ---- Sales Konsultan executive ----
+          </h3>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h1 class="text-xl font-bold text-custom-silver">Kontak</h1>
+          <div class="flex gap-3">
+            <img
+              src="img/call-calling.png"
+              alt=""
+            />
+            <h3
+              class="text-base font-medium text-custom-silver text-opacity-50"
+            >
+              081239440441
+            </h3>
+          </div>
+          <div class="flex gap-3">
+            <img
+              src="img/whatsapp.png"
+              alt=""
+            />
+            <h3
+              class="text-base font-medium text-custom-silver text-opacity-50"
+            >
+              081239440441
+            </h3>
+          </div>
+          <h3 class="text-base font-medium text-custom-silver text-center">
+            "Segera Konsultasikan & dapatkan Promo Menarik di bulan ini !"
+          </h3>
+          <h3
+            class="text-base font-serif text-center text-custom-silver opacity-50"
+          >
+            Klik Tombol di bawah ini untuk Chat dengan kami secara langsung
+            melalui Whatsapp.
+          </h3>
+        </div>
+        <button
+          class="text-base bg-custom-red text-white font-medium py-2 rounded-full w-full flex justify-center items-center gap-1 md:py-3 md:text-base md:gap-4 lg:gap-1 lg:text-sm"
+        >
+          Hubungi Kami
+        </button>
+      </div>
+    </section>
+    <!-- ========================== END SALES KONSULTAN ==========================  -->
+
+    <!-- ========================== FOOTER ==========================  -->
+    <footer class="px-4 bg-custom-black pb-6">
+      <div
+        class="w-full py-12 flex flex-col gap-4 border-b-custom-silver border-opacity-30 border-b-2"
+      >
+        <div class="flex flex-col gap-2">
+          <h1
+            class="text-2xl font-medium text-custom-light-white text-opacity-80"
+          >
+            Honda Pekalongan Motor
+          </h1>
+          <p class="text-custom-light-white opacity-50 text-sm font-normal">
+            Kami akan menghubungi anda <br />
+            melalui nomer : 0812 3944 0441 <br />
+            Sinin - Sabtu 08.30 - 17.30 WIB
+          </p>
+        </div>
+        <div class="flex flex-col gap-1">
+          <h3 class="text-custom-silver font-bold">Layanan Delaer</h3>
+          <p class="text-custom-light-white opacity-40 text-sm font-normal">
+            Sales, Service & Spareparts + Body & Repaire
+          </p>
+        </div>
+        <div class="flex flex-col gap-1">
+          <h3 class="text-custom-silver font-bold">Alamat</h3>
+          <p class="text-custom-light-white opacity-40 text-sm font-normal">
+            Jl. Dr. Sutomo No.168, Pekalongan <br />
+            Jawa Tengah - 51129
+          </p>
+        </div>
+        <div class="flex flex-col gap-1">
+          <h3 class="text-custom-silver font-bold">Kota</h3>
+          <p class="text-custom-light-white opacity-40 text-sm font-normal">
+            Main Dealer - Pekalongan <br />
+            Outlet - Pemalang
+          </p>
+        </div>
+        <div class="flex flex-col gap-1">
+          <h3 class="text-custom-silver font-bold">Provinsi</h3>
+          <p class="text-custom-light-white opacity-40 text-sm font-normal">
+            Jawa Tengah
+          </p>
+        </div>
+        <div class="flex flex-col gap-1">
+          <h3 class="text-custom-silver font-bold">Area Pemasaran</h3>
+          <p class="text-custom-light-white opacity-40 text-sm font-normal">
+            Pekalongan - Pemalang - Tegal
+          </p>
+        </div>
+      </div>
+      <div class="w-full py-3">
+        <p class="text-center text-custom-silver font-mono">
+          Copyright © Sep 2023 | lman.id
+        </p>
+      </div>
+    </footer>
+    <!-- ========================== END FOOTER ==========================  -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
