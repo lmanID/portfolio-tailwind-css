@@ -14,6 +14,8 @@ humbMenu.addEventListener('click', showMenu);
 closeMenu.addEventListener('click', hideMenu);
 
 // ========>>>>> HEADER HERO SLIDER IMG <<<<<=====
+
+// ========>>>>> HEADER HERO SLIDER IMG <<<<<=====
 const swiperWrapper = document.querySelector('.swiper-wrapper');
 const swiperSlide = document.querySelectorAll('.swiper-slide');
 
@@ -38,7 +40,6 @@ function starInterval() {
 }
 
 starInterval();
-
 // ========>>>>> END HEADER HERO SLIDER IMG <<<<<=====
 
 // ========>>>>> BUTTON SLIDER CAR <<<<<=====
@@ -76,6 +77,14 @@ const moveSlideCar = () => {
       step.classList.replace('w-4', 'w-2');
     }
   });
+
+  // stepCardCars.forEach((step, index) => {
+  //   if (index === indexSwiperSlidCar) {
+  //     step.classList.replace('bg-custom-silver', 'bg-custom-red');
+  //     step.classList.replace('opacity-20', 'opacity-100');
+  //     // step.classList.replace('w-2', 'w-3');
+  //   }
+  // });
 };
 
 moveSlideCar();
