@@ -684,6 +684,10 @@ video {
   width: 0.5rem;
 }
 
+.w-4 {
+  width: 1rem;
+}
+
 .w-4\/5 {
   width: 80%;
 }
@@ -727,10 +731,6 @@ video {
 
 .w-w-car {
   width: 83.76%;
-}
-
-.w-4 {
-  width: 1rem;
 }
 
 .max-w-xs {
@@ -883,6 +883,11 @@ video {
 
 .border-opacity-50 {
   --tw-border-opacity: 0.5;
+}
+
+.bg-blue-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 197 253 / var(--tw-bg-opacity));
 }
 
 .bg-custom-black {
@@ -1048,10 +1053,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-opacity-40 {
-  --tw-text-opacity: 0.4;
 }
 
 .text-opacity-50 {
