@@ -77,14 +77,6 @@ const moveSlideCar = () => {
       step.classList.replace('w-4', 'w-2');
     }
   });
-
-  // stepCardCars.forEach((step, index) => {
-  //   if (index === indexSwiperSlidCar) {
-  //     step.classList.replace('bg-custom-silver', 'bg-custom-red');
-  //     step.classList.replace('opacity-20', 'opacity-100');
-  //     // step.classList.replace('w-2', 'w-3');
-  //   }
-  // });
 };
 
 moveSlideCar();
@@ -107,3 +99,75 @@ prevBtn.addEventListener('click', () => {
   moveSlideCar();
 });
 // ========>>>>> END BUTTON SLIDER CAR <<<<<=====
+
+const cardLayanan = document.querySelector('.card-layanan');
+const slideCards = document.querySelectorAll('.slide-card-layanan');
+const stepCardLayanan = document.querySelectorAll('.step-card-layanan');
+
+let i = 0;
+const cardWidth = slideCards[0].offsetWidth;
+
+cardLayanan.style.width = `${cardWidth * slideCards.length}px`;
+
+// Memperbarui indikator langkah awal
+updateStepIndicator();
+
+cardLayanan.addEventListener('touchstart', handleTouchStart, false);
+cardLayanan.addEventListener('touchmove', handleTouchMove, false);
+
+function handleTouchStart(event) {
+  startX = event.touches[0].clientX;
+}
+
+function handleTouchMove(event) {
+  if (!startX) return;
+
+  const currentX = event.touches[0].clientX;
+  const diffX = startX - currentX;
+
+  // Sesuaikan nilai ambang batas untuk dianggap sebagai swipe
+  if (Math.abs(diffX) > 50) {
+    if (diffX > 0) {
+      geserKiri();
+    } else {
+      geserKanan();
+    }
+    startX = null; // Reset nilai awal setelah swipe
+  }
+}
+
+function geserKiri() {
+  if (i < slideCards.length - 1) {
+    i++;
+    geserKeIndex();
+    updateStepIndicator();
+  }
+}
+
+function geserKanan() {
+  if (i > 0) {
+    i--;
+    geserKeIndex();
+    updateStepIndicator();
+  }
+}
+
+function geserKeIndex() {
+  const newPosition = -i * cardWidth;
+  cardLayanan.style.transform = `translateX(${newPosition}px)`;
+}
+
+function updateStepIndicator() {
+  // Reset semua langkah menjadi tidak aktif
+  stepCardLayanan.forEach((step, index) => {
+    if (index === i) {
+      step.classList.replace('opacity-20', 'opacity-100');
+      step.classList.replace('bg-custom-silver', 'bg-custom-red');
+      step.classList.replace('w-2', 'w-4');
+    } else {
+      step.classList.replace('opacity-100', 'opacity-20');
+      step.classList.replace('bg-custom-red', 'bg-custom-silver');
+      step.classList.replace('w-4', 'w-2');
+    }
+  });
+}
